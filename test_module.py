@@ -4,6 +4,7 @@ import shape_calculator
 
 class UnitTests(unittest.TestCase):
     maxDiff = None
+
     def setUp(self):
         self.rect = shape_calculator.Rectangle(3, 6)
         self.sq = shape_calculator.Square(5)
@@ -40,7 +41,6 @@ class UnitTests(unittest.TestCase):
         actual = self.sq.get_area()
         expected = 25
         self.assertEqual(actual, expected, 'Expected area of square to be 25')
-        
 
     def test_perimeter(self):
         actual = self.rect.get_perimeter()
@@ -111,6 +111,7 @@ class UnitTests(unittest.TestCase):
         actual = rect2.get_amount_inside(self.rect)
         expected = 0
         self.assertEqual(actual, expected, 'Expected `get_amount_inside` to return 0.')
-        
+
+
 if __name__ == "__main__":
     unittest.main()
